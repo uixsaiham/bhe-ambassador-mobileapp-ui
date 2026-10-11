@@ -75,4 +75,3 @@ html,body{height:100%;overflow:hidden}
 .trail-track i.education-step{display:grid;place-items:center;width:27px;height:27px;background:#fbfcfe;color:var(--tier);border:1px solid #e5eaf3;box-shadow:0 2px 5px #293b8609;border-radius:9px}
 .education-step svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
-.welcome-study-illustration{position:absolute;right:6.1%;top:calc(21.5% - 70px);width:72px;height:46px;pointer-events:none}
