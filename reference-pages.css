@@ -9,50 +9,32 @@
 
 .policy-tabs{display:flex;gap:6px;margin:0 17px 10px;background:#f2f5fb;padding:4px;border-radius:11px;flex-shrink:0}.policy-tabs button{flex:1;border:0;background:none;color:#7890b5;font-size:11px;font-weight:600;border-radius:8px;padding:8px}.policy-tabs button.active{background:white;color:#163d80;box-shadow:0 2px 5px #122e6a0a}.policy-subheading{font-size:11px;line-height:1.5;color:#173b7e;margin:18px 0 8px}.policy-scroll>.policy-section{margin:22px 0 8px}.policy-scroll>p{margin:10px 0}
 .notification-overlay{position:absolute;inset:0;z-index:45;display:flex;align-items:center;padding:20px}.notification-backdrop{position:absolute;inset:0;border:0;background:#14213e70;backdrop-filter:blur(3px);animation:policy-dim .2s ease}.notification-modal{position:relative;width:100%;max-height:80%;display:flex;flex-direction:column;background:white;border:1px solid #ffffffb8;border-radius:26px;box-shadow:0 22px 55px #11213b35;overflow:hidden;animation:notification-enter .35s cubic-bezier(.22,1,.36,1)}.notification-modal>header{display:flex;align-items:center;gap:10px;padding:22px 18px 18px;border-bottom:1px solid #edf0f6}.notification-heading-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:14px;background:#fff1e7;color:#f57529;flex-shrink:0}.notification-heading-icon svg{width:21px;height:21px}.notification-modal h2{font-size:20px;color:#192c56;letter-spacing:-.5px;margin:0 0 5px}.notification-modal header p{font-size:9px;color:#8c98b0;margin:0}.notification-close{margin-left:auto;flex-shrink:0;border:0;background:#f3f5fa;width:29px;height:29px;border-radius:50%;color:#6e7e9f;font-size:23px;line-height:1;padding:0}.notification-list{padding:2px 18px;overflow:auto;overscroll-behavior:contain}.notification-list article{display:flex;gap:12px;padding:20px 0}.notification-list article+article{border-top:1px solid #edf0f6}.notification-event{display:grid;place-items:center;width:37px;height:37px;flex-shrink:0;border-radius:13px;background:#e9f7f0;color:#42997b}.notification-event svg{width:20px;height:20px}.notification-event.qualified{background:#fff3e5;color:#e79432}.notification-time{font-size:7px;color:#a0aabe;letter-spacing:1px;font-weight:700}.notification-list h3{font-size:13px;color:#24365a;margin:6px 0}.notification-list p{font-size:11px;color:#8995ac;line-height:1.6;margin:0 0 11px}.notification-reward{font-size:9px;color:#429d77;background:#eaf7ee;border-radius:7px;padding:5px 8px;font-weight:650}.notification-reward.orange{background:#fff2e5;color:#db8a34}.notification-modal footer{font-size:8px;text-align:center;background:#f9fafc;padding:13px;color:#a3adc0;border-top:1px solid #edf0f6}@keyframes notification-enter{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}@media(prefers-reduced-motion:reduce){.notification-modal,.notification-backdrop{animation:none}}
-/* Profile milestone cards stack within the phone's content scroll area. */
-.profile-tier-list{display:block;padding-bottom:18px;isolation:isolate}
-.profile-tier-list .tier-card{position:sticky;top:14px;margin:0 0 24px;box-shadow:0 5px 14px #1c315307}
-.profile-tier-list .tier-card:nth-child(1){top:14px;z-index:1}
-.profile-tier-list .tier-card:nth-child(2){top:52px;z-index:2}
-.profile-tier-list .tier-card:nth-child(3){top:90px;z-index:3}
-.profile-tier-list .tier-card:nth-child(4){top:128px;z-index:4;margin-bottom:0}
-/* The trailing scroll room lets every tier settle into the stack before sign out. */
-.profile-tier-list::after{content:'';display:block;height:128px}
-
-/* Let the final tier reach the sticky stack; keep Sign Out beside the stack. */
-.ref-profile{padding-bottom:calc(876px - 152px - 340px)}
-.ref-profile .profile-tier-list{padding-bottom:0;margin-bottom:14px}
-.ref-profile .profile-tier-list::after{display:none}
-.ref-profile .profile-tier-list .tier-card{top:14px;margin-bottom:22px;box-shadow:none}
-.ref-profile .profile-tier-list .tier-card:nth-child(2){top:52px}
-.ref-profile .profile-tier-list .tier-card:nth-child(3){top:90px}
-.ref-profile .profile-tier-list .tier-card:nth-child(4){top:128px;margin-bottom:0}
-
-/* Keep the milestone introduction above the card stack as the bank form leaves. */
-.ref-profile{padding-bottom:280px}
-.profile-milestone-section{position:relative}
-.milestone-sticky-intro{position:sticky;top:0;z-index:6;background:#fbf9f7;padding:12px 0 10px}
+/* CSS-only milestone stack, relative to the existing content scroller. */
+.ref-profile{padding-bottom:24px}
+.profile-mode .content{container-type:size}
+/* Reserve only the space occupied by the finished stack and Sign Out.
+   Pin lower in tall viewports so earlier profile content remains visible. */
+.profile-milestone-section{position:relative;--stack-step:38px;--stack-top:max(24px,calc(100cqh - 404px));padding-bottom:0}
+.ref-profile .profile-bank-details{position:sticky;top:0;z-index:5;max-height:none;overflow:visible;background:#fff}
+.milestone-sticky-intro{position:relative;top:auto;z-index:auto;background:#fbf9f7;padding:12px 0 10px}
 .milestone-sticky-intro .milestone-heading{margin:0}
 .milestone-sticky-intro .ref-help{margin-bottom:0!important}
-.ref-profile .profile-tier-list{margin-top:14px}
-.ref-profile .profile-tier-list .tier-card:nth-child(1){top:88px}
-.ref-profile .profile-tier-list .tier-card:nth-child(2){top:126px}
-.ref-profile .profile-tier-list .tier-card:nth-child(3){top:164px}
-.ref-profile .profile-tier-list .tier-card:nth-child(4){top:202px}
-/* Stack upwards from the bottom without artificial trailing scroll space. */
-.ref-profile{padding-bottom:24px}
-.ref-profile .profile-tier-list{padding-bottom:0;margin-bottom:14px}
-.ref-profile .profile-tier-list .tier-card{top:auto;margin-bottom:22px}
-.ref-profile .profile-tier-list .tier-card:nth-child(1){top:auto;bottom:114px}
-.ref-profile .profile-tier-list .tier-card:nth-child(2){top:auto;bottom:76px}
-.ref-profile .profile-tier-list .tier-card:nth-child(3){top:auto;bottom:38px}
-.ref-profile .profile-tier-list .tier-card:nth-child(4){top:auto;bottom:0;margin-bottom:0}
-/* Hold the first tier while subsequent tiers rise over it. Keep the bottom
-   constraints so the compact stack never adds trailing blank scroll space. */
-.ref-profile .profile-tier-list .tier-card:nth-child(1){top:88px;bottom:114px;z-index:1}
-.ref-profile .profile-tier-list .tier-card:nth-child(2){top:126px;bottom:76px;z-index:2}
-.ref-profile .profile-tier-list .tier-card:nth-child(3){top:164px;bottom:38px;z-index:3}
-.ref-profile .profile-tier-list .tier-card:nth-child(4){top:202px;bottom:0;z-index:4}
+.ref-profile .profile-tier-list{display:block;isolation:isolate;overflow:visible;margin:14px 0;padding-bottom:0}
+.ref-profile .profile-tier-list::after{display:none}
+.ref-profile .profile-tier-list .tier-card{position:sticky;top:calc(var(--stack-top) + var(--tier-index) * var(--stack-step));bottom:auto;z-index:calc(10 + var(--tier-index));margin:0 0 40px;border-radius:18px;padding:20px;min-height:170px;box-shadow:0 -3px 12px #1c315308,0 8px 20px #1c31530a}
+.ref-profile .profile-tier-list .tier-card:nth-child(1){--tier-index:0}
+.ref-profile .profile-tier-list .tier-card:nth-child(2){--tier-index:1}
+.ref-profile .profile-tier-list .tier-card:nth-child(3){--tier-index:2}
+.ref-profile .profile-tier-list .tier-card:nth-child(4){--tier-index:3;margin-bottom:0}
+.profile-milestone-section>.signout{margin-top:0;min-height:50px}
+/* Short screens keep the last card above the app navigation. */
+/* Small viewports use the main scroller for the complete bank form. */
+@media(max-height:800px){
+ .ref-profile .profile-bank-details{position:relative;top:auto}
+ .milestone-sticky-intro{position:relative;top:auto}
+ .profile-milestone-section{--stack-top:max(24px,calc(100cqh - 404px))}
+}
+@media(max-height:500px){.profile-milestone-section{--stack-step:38px;--stack-top:max(12px,calc(100cqh - 404px))}}
 /* Polished gradient tier cards on the welcome fan only. */
 .milestone-card-stage .welcome-tier-grid .welcome-tier{border:1px solid #ffffffaa;border-radius:18px;box-shadow:0 12px 24px #172c5526,inset 0 1px 0 #ffffffc9;overflow:hidden}
 .milestone-card-stage .welcome-tier.bronze{background:radial-gradient(ellipse at 8% 0%,#fff7e6,transparent 65%),linear-gradient(145deg,#f4c995,#e9ab75 55%,#c98051);color:#743d1d}
