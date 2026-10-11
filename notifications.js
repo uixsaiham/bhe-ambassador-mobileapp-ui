@@ -1,0 +1,12 @@
+let notificationFocus;
+function openNotifications(){
+ if(document.getElementById('notification-overlay'))return;
+ closePolicy(false);notificationFocus=document.activeElement;
+ const overlay=document.createElement('div');overlay.id='notification-overlay';overlay.className='notification-overlay';
+ overlay.innerHTML=`<button class="notification-backdrop" aria-label="Close notifications"></button><section class="notification-modal" role="dialog" aria-modal="true" aria-labelledby="notification-title"><header><span class="notification-heading-icon">${ri('bell')}</span><div><h2 id="notification-title">Your updates</h2><p>A little progress. A lot to celebrate.</p></div><button class="notification-close" aria-label="Close notifications">×</button></header><div class="notification-list"><article><span class="notification-event enrolled">${ri('cap')}</span><div><span class="notification-time">2 HOURS AGO</span><h3>Aisha has enrolled!</h3><p>A new chapter for them. Your £500 reward has been added.</p><span class="notification-reward">+ £500 earned</span></div></article><article><span class="notification-event qualified">${ri('check')}</span><div><span class="notification-time">YESTERDAY</span><h3>Tom’s referral qualified</h3><p>Your introduction made a difference. You’ve earned £10.</p><span class="notification-reward orange">+ £10 earned</span></div></article></div><footer>Sample updates · Local preview</footer></section>`;
+ document.querySelector('.phone').appendChild(overlay);['content','nav'].forEach(id=>document.getElementById(id).inert=true);
+ overlay.querySelector('.notification-close').onclick=()=>closeNotifications();overlay.querySelector('.notification-backdrop').onclick=()=>closeNotifications();
+ overlay.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();closeNotifications()}if(event.key==='Tab'){const items=[...overlay.querySelectorAll('button')];if(event.shiftKey&&document.activeElement===items[0]){event.preventDefault();items.at(-1).focus()}else if(!event.shiftKey&&document.activeElement===items.at(-1)){event.preventDefault();items[0].focus()}}});
+ overlay.querySelector('.notification-close').focus();
+}
+function closeNotifications(restore=true){const overlay=document.getElementById('notification-overlay');if(!overlay)return;overlay.remove();['content','nav'].forEach(id=>document.getElementById(id).inert=false);if(restore&&notificationFocus?.isConnected)notificationFocus.focus()}

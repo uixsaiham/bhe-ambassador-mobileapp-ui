@@ -1,0 +1,23 @@
+/* On mobile, the page is the app rather than a scaled device preview. */
+@media (max-width:760px){
+ html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#f8f7f4}
+ .workspace{width:100%;height:100dvh;max-width:none;padding:0;margin:0;display:block}
+ .workspace .stage{position:relative;width:100%;height:100%;min-height:0;padding:0;margin:0;display:block}
+ .stage .device-shell{position:relative;left:auto;top:auto;width:100%;max-width:none;height:100%;padding:0;border-radius:0;background:none;box-shadow:none;transform:none}
+ .device-shell::before,.device-shell::after{display:none}
+ .stage .phone{display:flex;flex-direction:column;position:relative;width:100%;max-width:none;height:100%;min-height:0;border:0;border-radius:0;box-shadow:none;padding-top:env(safe-area-inset-top,0px);overflow:hidden}
+ .phone .status,.phone .island,.phone .home-indicator{display:none!important}
+ .phone .content,.phone.no-tab-bar .content,.phone.alternate-mode.no-tab-bar .content{flex:1;min-height:0;width:100%;height:auto!important;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain}
+ .phone.alternate-mode.no-tab-bar .content{overflow:hidden}
+ .phone .nav{position:relative;bottom:auto;flex-shrink:0;width:100%;height:calc(72px + env(safe-area-inset-bottom,0px));padding:0 10px env(safe-area-inset-bottom,0px);overflow:visible}
+ .phone.no-tab-bar .content{padding-bottom:env(safe-area-inset-bottom,0px)}
+ .modern-home{padding-top:18px;padding-bottom:20px}
+ .phone .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+
+/* Desktop presentation: only the centered phone sits on the dark canvas. */
+@media (min-width:761px){
+ html,body{min-height:100%;background:#000}
+ .workspace,.workspace .stage{background:transparent}
+ .stage .device-shell{box-shadow:0 2px 3px #0008,0 22px 50px #0006}
+}
