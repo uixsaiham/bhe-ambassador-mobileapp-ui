@@ -75,3 +75,47 @@ html,body{height:100%;overflow:hidden}
 .trail-track i.education-step{display:grid;place-items:center;width:27px;height:27px;background:#fbfcfe;color:var(--tier);border:1px solid #e5eaf3;box-shadow:0 2px 5px #293b8609;border-radius:9px}
 .education-step svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
+
+.alternate-copy{background:#fbfcfe;padding-bottom:3px}
+.alternate-copy h2{font-size:34px;letter-spacing:-1.2px}
+
+/* Lead milestones take priority; cash remains a secondary benefit. */
+.alternate-welcome .welcome-tier-grid .welcome-tier{height:148px;border-radius:20px;padding:12px 10px;border:1px solid #ffffffc9;box-shadow:0 12px 22px #2437611f,inset 0 1px 0 #fff9}
+.alternate-welcome .welcome-tier.bronze{background:linear-gradient(145deg,#fff2e1,#edc6a4);color:#895330}
+.alternate-welcome .welcome-tier.silver{background:linear-gradient(145deg,#f6f9ff,#c5d3e5);color:#3b526f}
+.alternate-welcome .welcome-tier.gold{background:linear-gradient(145deg,#fff9d9,#f1d98e);color:#947019}
+.alternate-welcome .welcome-tier.platinum{background:linear-gradient(145deg,#637bbd,#283e73);color:#fff}
+.alternate-welcome .welcome-tier-name{gap:4px}
+.alternate-welcome .welcome-tier-name>span{width:20px;height:20px;border-radius:7px;font-size:12px}
+.alternate-welcome .welcome-tier-name h4{font-size:9px;letter-spacing:-.2px}
+.welcome-tier-leads{position:relative;z-index:1;margin:12px 0 12px}
+.welcome-tier-leads strong{display:block;font-size:38px;line-height:.98;letter-spacing:-1.8px;font-weight:850;text-shadow:0 1px 0 #ffffff20}
+.welcome-tier-leads>span{display:block;font-size:7px;line-height:1.4;letter-spacing:.1px;margin-top:5px;font-weight:650;opacity:.8;white-space:nowrap}
+.welcome-tier-cash{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:3px;border-top:1px solid #ffffff80;padding-top:9px}
+.welcome-tier-cash>span{font-size:6px;line-height:1.4;opacity:.7}
+.welcome-tier-cash>b{font-size:13px;letter-spacing:-.3px;font-weight:800}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-cash{border-top-color:#ffffff30}
+
+/* Ambassador benefits replace the secondary cash bonus detail. */
+.welcome-tier-benefit{position:relative;z-index:1;border-top:1px solid #ffffff80;padding-top:7px}
+.welcome-tier-benefit>span{display:block;font-size:6px;line-height:1.3;opacity:.65;margin-bottom:3px}
+.welcome-tier-benefit>b{display:block;font-size:8px;line-height:1.35;font-weight:750;letter-spacing:-.1px}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit{border-top-color:#ffffff30}
+
+/* Consistent card rhythm and a readable two-line benefit. */
+.alternate-welcome .welcome-tier-grid .welcome-tier{display:flex;flex-direction:column;align-items:stretch;height:160px;padding:12px 9px;text-align:center}
+.alternate-welcome .welcome-tier-name{justify-content:center;min-height:22px;gap:3px}
+.alternate-welcome .welcome-tier-name>span{width:17px;height:19px;font-size:11px;border-radius:6px}
+.alternate-welcome .welcome-tier-name h4{font-size:9px;letter-spacing:-.2px}
+.alternate-welcome .welcome-tier-leads{margin:10px 0 9px;flex-shrink:0}
+.alternate-welcome .welcome-tier-leads strong{font-size:37px;line-height:1;letter-spacing:-1.6px}
+.alternate-welcome .welcome-tier-leads>span{font-size:7px;font-weight:650;margin-top:5px;opacity:.9}
+.alternate-welcome .welcome-tier-benefit{display:flex;align-items:center;justify-content:center;flex:1;min-height:39px;margin-top:auto;padding-top:8px;border-top:1px solid #ffffff90}
+.alternate-welcome .welcome-tier-benefit>b{font-size:9px;line-height:1.4;font-weight:750;letter-spacing:-.15px;text-wrap:balance}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit{border-top-color:#ffffff50}
+
+/* Tier icons share a consistent badge and title alignment. */
+.alternate-welcome .welcome-tier-name{display:flex;align-items:center;justify-content:flex-start;gap:5px;min-height:24px;width:100%;text-align:left}
+.alternate-welcome .welcome-tier-name>span{display:flex;align-items:center;justify-content:center;flex:0 0 21px;width:21px;height:24px;margin:0;padding:0;font-size:14px;line-height:1;border-radius:7px;background:#ffffff65;border:1px solid #ffffff85;box-shadow:0 2px 4px #24365708}
+.alternate-welcome .welcome-tier-name h4{display:block;margin:0;padding:0;font-size:9px;line-height:1.2;font-weight:800;letter-spacing:-.25px;white-space:nowrap}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-name>span{background:#ffffff25;border-color:#ffffff40}
