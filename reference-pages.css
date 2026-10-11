@@ -119,3 +119,34 @@ html,body{height:100%;overflow:hidden}
 .alternate-welcome .welcome-tier-name>span{display:flex;align-items:center;justify-content:center;flex:0 0 21px;width:21px;height:24px;margin:0;padding:0;font-size:14px;line-height:1;border-radius:7px;background:#ffffff65;border:1px solid #ffffff85;box-shadow:0 2px 4px #24365708}
 .alternate-welcome .welcome-tier-name h4{display:block;margin:0;padding:0;font-size:9px;line-height:1.2;font-weight:800;letter-spacing:-.25px;white-space:nowrap}
 .alternate-welcome .welcome-tier.platinum .welcome-tier-name>span{background:#ffffff25;border-color:#ffffff40}
+
+/* Premium Platinum: dark graphite with restrained metallic gold accents. */
+.alternate-welcome .welcome-tier.platinum{background:radial-gradient(ellipse at 0% 0%,#66563580,transparent 60%),linear-gradient(145deg,#34332f,#1f232b 65%,#141a25);color:#f6dfa8;border-color:#d8b975;box-shadow:0 12px 24px #141a2533,inset 0 1px 0 #f5ddb866}
+.alternate-welcome .welcome-tier.platinum::before{background:linear-gradient(120deg,#f8dfb519,transparent 38%,#e7c47c10 70%,transparent)}
+.alternate-welcome .welcome-tier.platinum::after{border-color:#d9bd78;box-shadow:0 0 0 10px #d9bd7808,0 0 0 22px #d9bd7805;opacity:.25}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-name>span{background:#d7b76c20;border-color:#d7b76c55;box-shadow:inset 0 1px 0 #f6dfa820}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-name h4{color:#f0d99e}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-leads strong{color:#ffebba;text-shadow:0 2px 8px #d1ac5720}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-leads>span{color:#d8c9a9;opacity:1}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit{border-top-color:#d7b76c55}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit>b{color:#f1d69a}
+
+/* Platinum in a polished champagne-gold finish. */
+.alternate-welcome .welcome-tier.platinum{background:radial-gradient(ellipse at 5% 0%,#fff6d4 0%,transparent 55%),linear-gradient(135deg,#f5df9f 0%,#d6b15b 38%,#f8e8b8 63%,#c69c45 100%);color:#624817;border-color:#fff0be;box-shadow:0 12px 24px #7d5c2529,inset 0 1px 0 #fff7dc}
+.alternate-welcome .welcome-tier.platinum::before{background:linear-gradient(115deg,transparent 22%,#fffbea55 45%,transparent 68%)}
+.alternate-welcome .welcome-tier.platinum::after{border-color:#fff4cd;box-shadow:0 0 0 10px #fff5d51a,0 0 0 22px #fff5d510;opacity:.4}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-name>span{background:#fff7da80;border-color:#fff7dc;box-shadow:inset 0 1px 0 #fff}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-name h4{color:#634819}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-leads strong{color:#513a10;text-shadow:0 1px 0 #fff6d580}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-leads>span{color:#735922;opacity:1}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit{border-top-color:#98753055}
+.alternate-welcome .welcome-tier.platinum .welcome-tier-benefit>b{color:#5e4418}
+
+/* Gold uses warm amber-copper to distinguish it from champagne Platinum. */
+.alternate-welcome .welcome-tier.gold{background:radial-gradient(ellipse at 0% 0%,#ffe2be,transparent 58%),linear-gradient(145deg,#efb575,#dc914e 55%,#c67a3c);color:#643718;border-color:#ffdab0;box-shadow:0 12px 22px #99552222,inset 0 1px 0 #fff0d5}
+.alternate-welcome .welcome-tier.gold .welcome-tier-name>span{background:#fff0d58c;border-color:#ffe8c7}
+.alternate-welcome .welcome-tier.gold .welcome-tier-name h4{color:#77401b}
+.alternate-welcome .welcome-tier.gold .welcome-tier-leads strong{color:#633317}
+.alternate-welcome .welcome-tier.gold .welcome-tier-leads>span{color:#80502b;opacity:1}
+.alternate-welcome .welcome-tier.gold .welcome-tier-benefit{border-top-color:#fff0d58c}
+.alternate-welcome .welcome-tier.gold .welcome-tier-benefit>b{color:#683919}
